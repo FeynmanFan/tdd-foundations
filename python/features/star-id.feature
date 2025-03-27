@@ -12,3 +12,9 @@ Feature: Star Identification
     Given emission spectra that is not sun-like
     When compared to the sun's spectra
     Then it should not be equal
+
+  Scenario: Check whether an object has a gas signature
+    Given an emission spectra 
+    When the first element should be less than the second
+    And the third element should be less than the second
+    Then the spectra should be classified as having a gas signature
