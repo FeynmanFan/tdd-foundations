@@ -7,7 +7,7 @@ from src.spectra import SpectraComparator
 
 def test_sirius_is_star():
     sirius = CelestialObject(spectra=[300, 450, 700])
-    assert sirius.is_star() == True
+    assert True == sirius.is_star()
 
 def test_spectra_is_sol():
     # arrange
@@ -18,7 +18,7 @@ def test_spectra_is_sol():
     result = spectraComparator.isSolar(spectra)
 
     # assert
-    assert result == True
+    assert True == result
 
 def test_spectra_is_not_sol():
     # arrange 
@@ -29,4 +29,15 @@ def test_spectra_is_not_sol():
     result = spectraComparator.isSolar(spectra)
 
     #assert
-    assert result == False
+    assert False == result
+
+def test_spectra_is_nebula():
+    # arrange
+    spectra = [100, 700, 200]
+    cel = CelestialObject(spectra=spectra)
+
+    # act
+    result = cel.is_nebula()
+
+    # assert
+    assert True == result
