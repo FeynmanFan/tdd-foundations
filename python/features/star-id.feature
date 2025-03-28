@@ -4,7 +4,7 @@ Feature: Star Identification
   So that I can catalog celestial objects
 
   Scenario: Check if an object is a star
-    Given an object named "Sirius"
+    Given a Celestial object with a spectrum
     When it emits its own light
     Then it should be classified as a star
 
